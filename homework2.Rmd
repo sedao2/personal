@@ -1,0 +1,45 @@
+---
+title: "homework2"
+author: "Seda Ozer"
+date: "9/6/2020"
+output: html_document
+---
+#Question 2 Create an R Markdown document and do the following (include the R code in all of your answers)
+
+#a)show the step-by-step how to solve the following system of equations in R (Use R chunks to run each part). 
+
+2x + 5y = 33
+
+x + 3y = 19
+
+```{r}
+a <- matrix(c(2, 1, 5, 3), nrow = 2, ncol = 2)
+b <- rbind(33, 19)
+solve(a, b)
+```
+
+#b) create a vector that goes from 1 to 100 and calculates the average of it WITHOUT using the R function “mean”
+
+```{r}
+x<- 1:100
+sum(x)/100
+```
+
+#c) install the package “dplyr”
+```{r}
+install.packages("dplyr", repos = 'http://cran.us.r-project.org')
+```
+# Question 3 create a data frame of two rows with A, B, C, and D in row 1 and D, E, F, and G in row 2
+
+```{r}
+column1<-c("A","D")
+column2<-c("B","E")
+column3<-c("C","F")
+column4<-c("D","G")
+df<- data.frame(column1,column2,column3,column4)
+df
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
